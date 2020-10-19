@@ -9,7 +9,7 @@
     "build:dev": "webpack --config webpack/webpack.dev.js",
     "build:types": "tsc --b && tscpaths -p tsconfig.json -s ./src -o dist",
     "start": "concurrently \"webpack --watch --config webpack/webpack.dev.js\" \"nodemon --delay 5 dist/bundle.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jest.config.js"
   },
   "keywords": [],
   "author": "",

@@ -1,27 +1,27 @@
-import { OutputBlockData } from '@editorjs/editorjs'
 import { ParserFunctionMap } from '@/interfaces'
 
-const parserFunctionMap: ParserFunctionMap = {
+
+export const parserFunctionMap: ParserFunctionMap = {
   delimiter: () => {
     return `<br/>`
   },
 
-  header: ({ data }: OutputBlockData) => {
-    return `<h${data.level}> ${data.text} </h${data.level}>`
+  header: data => {
+    return `<h${data.level}> ${data.text?.replace('<a', '<a target="_blank"')} </h${data.level}>`
   },
 
-  paragraph: ({ data }: OutputBlockData) => {
-    return `<p> ${data.text} </p>`
+  paragraph: data => {
+    return `<p> ${data.text?.replace('<a', '<a target="_blank"')} </p>`
   },
 
-  list: ({ data }: OutputBlockData) => {
-    let style = data.style === 'unordered' ? 'ul' : 'ol'
-    let list = data.items.map(i => `<li> ${i} </li>`).reduce((a, c) => a + c, '')
-    return `<${style}> ${list} </${style}>`
+  list: data => {
+    const items = data.items || []
+    const listType = data.style === 'unordered' ? 'ul' : 'ol'
+    const list = items.map(i => `<li> ${i.replace('<a', '<a target="_blank"')} </li>`).reduce((a, c) => a + c, '')
+    return `<${listType}> ${list} </${listType}>`
   },
 
-  image: ({ data }: OutputBlockData) => {
-    let caption = data.caption ? data.caption : 'Image'
-    return `<img src="${data.file.url}" alt="${caption}" />`
+  image: data => {
+    return `<img src="${data.file?.url}"  />`
   },
 }
