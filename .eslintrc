@@ -1,0 +1,64 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+    // "prettier"
+  ],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-for-in-array": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      2,
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        }
+      }
+    ],
+    "@typescript-eslint/quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "arrow-parens": "off",
+    "space-before-blocks": "off",
+    "keyword-spacing": "off",
+    "object-curly-newline": "off",
+    "arrow-body-style": "off",
+    "padded-blocks": "off",
+    "no-console": "off",
+    "semi": [
+      2,
+      "never"
+    ],
+    "comma-dangle": [
+      0,
+      "always"
+    ],
+    "max-len": [
+      2,
+      120
+    ]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/"
+  ]
+}

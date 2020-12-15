@@ -5,7 +5,7 @@ module.exports = {
   entry: path.resolve(process.cwd(), 'src/index.ts'),
   output: {
     path: path.resolve(process.cwd(), 'dist/'),
-    filename: 'bundle.js',
+    filename: 'index.js',
   },
   module: {
     rules: [
@@ -17,6 +17,7 @@ module.exports = {
             presets: ['@babel/preset-typescript'],
             plugins: [
               // new BundleAnalyzerPlugin()
+              '@babel/plugin-proposal-optional-chaining',
               'add-module-exports',
               [
                 'module-resolver',

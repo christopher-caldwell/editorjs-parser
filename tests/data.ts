@@ -17,7 +17,7 @@ export const data: EditorJsBlock[] = [
   {
     type: 'paragraph',
     data: {
-      text: "This is some great stuff, I mean <b>great stuff.</b>"
+      text: 'This is some great stuff, I mean <b>great stuff.</b>'
     }
   },
   {
