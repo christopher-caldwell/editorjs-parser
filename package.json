@@ -1,6 +1,6 @@
 {
   "name": "@caldwell619/editorjs-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parsing tool to turn Editor.js block data into HTML strings",
   "main": "dist/index.js",
   "scripts": {
