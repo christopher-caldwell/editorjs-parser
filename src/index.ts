@@ -1,5 +1,5 @@
 import { EditorJsBlock, HeaderBlock, ListBlock, EmbedBlock, ImageBlock, ParagraphBlock } from './interfaces'
-import { Config} from './interfaces/parser-config'
+import { Config } from './interfaces/parser-config'
 import { parserFunctionMap } from './helpers/parser'
 
 export const parseEditorJsIntoHtmlStrings = (blocks: EditorJsBlock[], config?: Config): string[] => {
@@ -23,7 +23,4 @@ export const parseEditorJsIntoHtmlStrings = (blocks: EditorJsBlock[], config?: C
   })
 }
 
-export {
-  Config,
-  EditorJsBlock
-}
+export { Config, EditorJsBlock }

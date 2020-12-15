@@ -13,5 +13,5 @@ export const parserFunctionMap: ParserFunctionMap = {
   paragraph: handleParagraph,
   list: handleList,
   image: handleImage,
-  embed: handleEmbed
+  embed: handleEmbed,
 }

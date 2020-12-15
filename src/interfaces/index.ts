@@ -24,7 +24,7 @@ export interface ParagraphBlock {
 
 export interface HeaderBlock {
   /** The number that the header element is eg 1 = h1 */
-  level: 1|2|3|4|5|6
+  level: 1 | 2 | 3 | 4 | 5 | 6
   /** The text inside of the HTML element */
   text: string
 }
@@ -72,5 +72,3 @@ export interface EditorJsBlock {
   data: ImageBlock | ListBlock | HeaderBlock | ParagraphBlock | EmbedBlock
   type: AllowableCategory
 }
-
-
