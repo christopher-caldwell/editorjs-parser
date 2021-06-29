@@ -6,6 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'dist/'),
     filename: 'index.js',
+    libraryTarget: 'umd',
+    library: '@caldwell619/editorjs-parser',
   },
   module: {
     rules: [

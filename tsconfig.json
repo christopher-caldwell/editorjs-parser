@@ -4,8 +4,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "emitDeclarationOnly": true,
-    "outFile": "dist/index.d.ts",
     "declaration": true,
     "outDir": "dist/",
     "strict": true,
